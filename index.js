@@ -27,7 +27,10 @@ function identity(value) {
 module.exports.identity = identity;
 
 
-/**     typeOf: Return the type of <value> as a string
+/** typeOfreturns a string indicating the type of the unevaluated operand.
+ * 
+ * 
+ * typeOf: Return the type of <value> as a string
 *       Parameter 1) Any value
 */
 
@@ -48,8 +51,6 @@ Returns the first element of an array. Passing n will return the first n element
 
 _.first([5, 4, 3, 2, 1]);
 => 5  
-
-
 
 
  * first: 1) If <array> is not an array, returns []
@@ -498,10 +499,9 @@ var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 function reduce(array, fn, seed){
     var sum;
     if (seed === undefined || seed === 'null'){
-        sum = array[0]; console.log(array[0]);
+        sum = array[0];
         for(var j = 1; j < array.length; j++){
             sum = fn(sum, array[j], j);
-            console.log(sum);
         }
     }else{
         for (var i = 0; i < array.length; i++){
